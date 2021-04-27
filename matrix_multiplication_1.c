@@ -57,23 +57,25 @@ void init_matrix(int **matrix, int size)
 {
     srand(time(NULL));
 
-	for (int i = 0; i < size; i++)
+    for (int i = 0; i < size; i++)
     {
-		for (int j = 0; j < size; j++)
-		{
-			matrix[i][j] = rand() % 10;
-		}
+        for (int j = 0; j < size; j++)
+        {
+            matrix[i][j] = rand() % 10;
+        }
     }
 }
 
 void print_matrix(const int **matrix, int size)
 {
     for (int i = 0; i < MATRIX_SIZE; i++)
-	{
-		for (int j = 0; j < MATRIX_SIZE; j++)
-			printf("%d ", matrix[i][j]);
-		printf("\n");
-	}
+    {
+        for (int j = 0; j < MATRIX_SIZE; j++)
+        {
+            printf("%d ", matrix[i][j]);
+        }
+        printf("\n");
+    }
 }
 
 void multiply_matrices(const int **A, const int **B, int **C)
