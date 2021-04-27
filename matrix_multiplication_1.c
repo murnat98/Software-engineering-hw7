@@ -29,9 +29,9 @@ int main()
 
     for (int i = 0; i < MATRIX_SIZE; i++)
     {
-        A[i] = (int *)calloc(MATRIX_SIZE, sizeof(int));
-        B[i] = (int *)calloc(MATRIX_SIZE, sizeof(int));
-        C[i] = (int *)calloc(MATRIX_SIZE, sizeof(int));
+        A[i] = (int *) calloc(MATRIX_SIZE, sizeof(int));
+        B[i] = (int *) calloc(MATRIX_SIZE, sizeof(int));
+        C[i] = (int *) calloc(MATRIX_SIZE, sizeof(int));
     }
 
     init_matrix(A, MATRIX_SIZE);
@@ -40,17 +40,17 @@ int main()
     multiply_matrices((const int **) A, (const int **) B, C);
 
 #ifdef PRINT
-	printf("matrix A\n");
+    printf("matrix A\n");
     print_matrix(A, MATRIX_SIZE);
 
-	printf("\nmatrix B\n");
+    printf("\nmatrix B\n");
     print_matrix(B, MATRIX_SIZE);
 	
-	printf("\nthe result of multiplying\n");
+    printf("\nthe result of multiplying\n");
     print_matrix(C, MATRIX_SIZE);
 #endif
 
-	return 0;
+    return 0;
 }
 
 void init_matrix(int **matrix, int size)
